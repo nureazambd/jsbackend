@@ -238,19 +238,19 @@ const user = [
 
 app.use(cors()) //Enable All CORS Requests
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Hello World!')
 });
 
-app.get('/about', (req, res)=>{
+app.get('/api/about', (req, res)=>{
     res.send('About page')
 });
 
-app.get('/contact-us', (req, res)=>{
+app.get('/api/contact-us', (req, res)=>{
     res.send('Contact page')
 })
 
-app.get('/user-list', (req, res)=>{
+app.get('/api/user-list', (req, res)=>{
     res.json(user)
 })
 
