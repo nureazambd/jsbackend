@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express')
+let cors = require('cors')
 const app = express()
 
 const user = [
@@ -234,6 +235,8 @@ const user = [
       }
     }
   ]
+
+app.use(cors()) //Enable All CORS Requests
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
